@@ -36,21 +36,21 @@
         <!-- dashboard total count card start -->
         <div class="p-5 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg">
           <p class="font-medium text-base md:text-2xl mb-2.5">Total</p>
-          <h2 class="font-bold text-xl md:text-4xl text-blue-950">8</h2>
+          <h2 id="total-count" class="font-bold text-xl md:text-4xl text-blue-950">0</h2>
         </div>
         <!-- dashboard total count card end -->
 
         <!-- dashboard Interview count card start -->
         <div class="p-5 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg">
           <p class="font-medium text-base md:text-2xl mb-2.5">Interview</p>
-          <h2 class="font-bold text-xl md:text-4xl text-green-500">8</h2>
+          <h2 id="interview-count" class="font-bold text-xl md:text-4xl text-green-500">0</h2>
         </div>
         <!-- dashboard Interview count card end -->
 
         <!-- dashboard Rejected count card start -->
         <div class="p-5 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg">
           <p class="font-medium text-base md:text-2xl mb-2.5">Rejected</p>
-          <h2 class="font-bold text-xl md:text-4xl text-red-500">8</h2>
+          <h2 id="rejected-count" class="font-bold text-xl md:text-4xl text-red-500">0</h2>
         </div>
         <!-- dashboard Rejected count card end -->
 
@@ -69,18 +69,19 @@
       <!-- Available Jobs section title start -->
       <div class="flex justify-between items-center gap-3">
         <h2 class="text-xl md:text-2xl font-semibold text-blue-950">Available Jobs</h2>
-        <p class="text-base md:text-lg font-semibold text-gray-600"><span>8</span>&ensp;jobs</p>
+        <p class="text-base md:text-lg font-semibold text-gray-600"><span id="available-job-count">0</span>&ensp;jobs
+        </p>
       </div>
       <!-- Available Jobs section title end -->
 
       <!-- Button of Available Jobs section start -->
       <div
         class="py-5 flex flex-col justify-center items-stretch gap-3 md:flex-row md:items-center md:justify-start md:gap-5">
-        <button
+        <button id="all-button"
           class="py-3 md:py-5 px-5 md:px-10 border-2 border-gray-200 bg-gray-50 rounded-lg font-medium text-lg md:text-2xl w-full md:w-60 text-gray-600 cursor-pointer">All</button>
-        <button
+        <button id="interview-button"
           class="py-3 md:py-5 px-5 md:px-10 border-2 border-gray-200 bg-gray-50 rounded-lg font-medium text-lg md:text-2xl w-full md:w-60 text-gray-600 cursor-pointer">Interview</button>
-        <button
+        <button id="rejected-button"
           class="py-3 md:py-5 px-5 md:px-10 border-2 border-gray-200 bg-gray-50 rounded-lg font-medium text-lg md:text-2xl w-full md:w-60 text-gray-600 cursor-pointer">Rejected</button>
       </div>
       <!-- Button of Available Jobs section end -->
@@ -89,7 +90,7 @@
     <!-- all job card section start -->
     <section class="pb-10 space-y-5">
 
-      <div class="space-y-5">
+      <div id="all-job-show" class="space-y-5">
 
         <!-- job card start 1 -->
         <div class="p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-5">
@@ -270,8 +271,9 @@
               Applied</p>
 
             <!-- job description -->
-            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud
-            infrastructure.</p>
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Design and maintain scalable backend systems
+              using Python and AWS. Work with modern DevOps practices and cloud
+              infrastructure.</p>
           </div>
 
           <!-- status toggle button -->
@@ -317,8 +319,9 @@
               Applied</p>
 
             <!-- job description -->
-            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development
-            expertise required.</p>
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Create beautiful and functional user
+              interfaces for our suite of products. Strong design skills and frontend development
+              expertise required.</p>
           </div>
 
           <!-- status toggle button -->
@@ -364,8 +367,9 @@
               Applied</p>
 
             <!-- job description -->
-            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health
-            insurance, and professional development opportunities.</p>
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Build enterprise applications with JavaScript
+              and modern frameworks. We offer competitive compensation, health
+              insurance, and professional development opportunities.</p>
           </div>
 
           <!-- status toggle button -->
@@ -411,8 +415,9 @@
               Applied</p>
 
             <!-- job description -->
-            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits
-            and equity package included.</p>
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Join our fast-growing startup and work on our
+              core platform. Experience with Node.js and React required. Great benefits
+              and equity package included.</p>
           </div>
 
           <!-- status toggle button -->
@@ -458,8 +463,9 @@
               Applied</p>
 
             <!-- job description -->
-            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You
-            will work with a talented team on cutting-edge projects.</p>
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">We are looking for an experienced Frontend
+              Developer to build scalable web applications using React and TypeScript. You
+              will work with a talented team on cutting-edge projects.</p>
           </div>
 
           <!-- status toggle button -->
@@ -488,6 +494,19 @@
 
     </section>
     <!-- all job card section end -->
+
+    <!-- Interview job card section start -->
+    <section class="pb-10 space-y-5">
+      <div id="interview-job-show" class="space-y-5"></div>
+    </section>
+    <!-- Interview job card section end -->
+
+    <!-- Rejected job card section start -->
+    <section class="pb-10 space-y-5">
+      <div id="rejected-job-show" class="space-y-5"></div>
+    </section>
+    <!-- Rejected job card section end -->
+
   </main>
   <!-- Available Jobs end -->
 
