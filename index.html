@@ -74,7 +74,8 @@
       <!-- Available Jobs section title end -->
 
       <!-- Button of Available Jobs section start -->
-      <div class="py-5 flex flex-col justify-center items-stretch gap-3 md:flex-row md:items-center md:justify-start md:gap-5">
+      <div
+        class="py-5 flex flex-col justify-center items-stretch gap-3 md:flex-row md:items-center md:justify-start md:gap-5">
         <button
           class="py-3 md:py-5 px-5 md:px-10 border-2 border-gray-200 bg-gray-50 rounded-lg font-medium text-lg md:text-2xl w-full md:w-60 text-gray-600">All</button>
         <button
@@ -87,57 +88,406 @@
 
     <!-- all job card section start -->
     <section class="pb-10 space-y-5">
-      <!-- job card start -->
-      <div class="p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-5">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <!-- company name -->
-          <div>
-            <h2 class="text-xl md:text-2xl text-blue-950 font-semibold leading-10">Mobile First Corp</h2>
-            <p class="text-base md:text-xl text-gray-500 leading-6">React Native Developer</p>
+
+      <div class="space-y-5">
+
+        <!-- job card start 1 -->
+        <div class="p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-5">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <!-- company name -->
+            <div>
+              <h2 class="text-xl md:text-2xl text-blue-950 font-semibold leading-10">Mobile First Corp</h2>
+              <p class="text-base md:text-xl text-gray-500 leading-6">React Native Developer</p>
+            </div>
+            <!-- delete button -->
+            <div>
+              <button
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 flex items-center justify-center">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
           </div>
-          <!-- delete button -->
+
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="text-base md:text-lg text-gray-500 leading-6">Remote</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">Full-time</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">$130,000 - $175,000</span>
+          </div>
+
           <div>
+            <!-- status badge -->
+            <p
+              class="py-2.5 px-5 inline-block bg-blue-100 rounded-lg font-medium text-lg md:text-2xl text-blue-950 uppercase">
+              Not
+              Applied</p>
+
+            <!-- job description -->
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Build cross-platform mobile applications
+              using
+              React Native.
+              Work on products used by
+              millions of users worldwide.</p>
+          </div>
+
+          <!-- status toggle button -->
+          <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
             <button
-              class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 flex items-center justify-center">
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase">interview</button>
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase">rejected</button>
           </div>
         </div>
+        <!-- job card end 1 -->
 
-        <div class="flex flex-wrap items-center gap-2.5">
-          <span class="text-base md:text-lg text-gray-500 leading-6">Remote</span>
-          <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
-          <span class="text-base md:text-lg text-gray-500 leading-6">Full-time</span>
-          <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
-          <span class="text-base md:text-lg text-gray-500 leading-6">$130,000 - $175,000</span>
+        <!-- job card start 2 -->
+        <div class="p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-5">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <!-- company name -->
+            <div>
+              <h2 class="text-xl md:text-2xl text-blue-950 font-semibold leading-10">WebFlow Agency</h2>
+              <p class="text-base md:text-xl text-gray-500 leading-6">Web Designer & Developer</p>
+            </div>
+            <!-- delete button -->
+            <div>
+              <button
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 flex items-center justify-center">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="text-base md:text-lg text-gray-500 leading-6">Los Angeles, CA</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">Part-time</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">$80,000 - $120,000</span>
+          </div>
+
+          <div>
+            <!-- status badge -->
+            <p
+              class="py-2.5 px-5 inline-block bg-blue-100 rounded-lg font-medium text-lg md:text-2xl text-blue-950 uppercase">
+              Not
+              Applied</p>
+
+            <!-- job description -->
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Create stunning web experiences for
+              high-profile clients. Must have portfolio and experience with modern web design
+              trends.</p>
+          </div>
+
+          <!-- status toggle button -->
+          <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase">interview</button>
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase">rejected</button>
+          </div>
         </div>
+        <!-- job card end 2 -->
 
+        <!-- job card start 3 -->
+        <div class="p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-5">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <!-- company name -->
+            <div>
+              <h2 class="text-xl md:text-2xl text-blue-950 font-semibold leading-10">DataViz Solutions</h2>
+              <p class="text-base md:text-xl text-gray-500 leading-6">Data Visualization Specialist</p>
+            </div>
+            <!-- delete button -->
+            <div>
+              <button
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 flex items-center justify-center">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="text-base md:text-lg text-gray-500 leading-6">Boston, MA</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">Full-time</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">$125,000 - $165,000</span>
+          </div>
+
+          <div>
+            <!-- status badge -->
+            <p
+              class="py-2.5 px-5 inline-block bg-blue-100 rounded-lg font-medium text-lg md:text-2xl text-blue-950 uppercase">
+              Not
+              Applied</p>
+
+            <!-- job description -->
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Transform complex data into compelling
+              visualizations. Required skills: D3.js, React, and strong analytical thinking.
+            </p>
+          </div>
+
+          <!-- status toggle button -->
+          <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase">interview</button>
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase">rejected</button>
+          </div>
+        </div>
+        <!-- job card end 3 -->
+
+        <!-- job card start 4 -->
+        <div class="p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-5">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <!-- company name -->
+            <div>
+              <h2 class="text-xl md:text-2xl text-blue-950 font-semibold leading-10">CloudFirst Inc</h2>
+              <p class="text-base md:text-xl text-gray-500 leading-6">Backend Developer</p>
+            </div>
+            <!-- delete button -->
+            <div>
+              <button
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 flex items-center justify-center">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="text-base md:text-lg text-gray-500 leading-6">Seattle, WA</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">Full-time</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">$140,000 - $190,000</span>
+          </div>
+
+          <div>
+            <!-- status badge -->
+            <p
+              class="py-2.5 px-5 inline-block bg-blue-100 rounded-lg font-medium text-lg md:text-2xl text-blue-950 uppercase">
+              Not
+              Applied</p>
+
+            <!-- job description -->
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud
+            infrastructure.</p>
+          </div>
+
+          <!-- status toggle button -->
+          <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase">interview</button>
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase">rejected</button>
+          </div>
+        </div>
+        <!-- job card end 4 -->
+
+        <!-- job card start 5 -->
+        <div class="p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-5">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <!-- company name -->
+            <div>
+              <h2 class="text-xl md:text-2xl text-blue-950 font-semibold leading-10">Innovation Labs</h2>
+              <p class="text-base md:text-xl text-gray-500 leading-6">UI/UX Engineer</p>
+            </div>
+            <!-- delete button -->
+            <div>
+              <button
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 flex items-center justify-center">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="text-base md:text-lg text-gray-500 leading-6">Austin, TX</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">Full-time</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">$110,000 - $150,000</span>
+          </div>
+
+          <div>
+            <!-- status badge -->
+            <p
+              class="py-2.5 px-5 inline-block bg-blue-100 rounded-lg font-medium text-lg md:text-2xl text-blue-950 uppercase">
+              Not
+              Applied</p>
+
+            <!-- job description -->
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development
+            expertise required.</p>
+          </div>
+
+          <!-- status toggle button -->
+          <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase">interview</button>
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase">rejected</button>
+          </div>
+        </div>
+        <!-- job card end 5 -->
+
+        <!-- job card start 6 -->
+        <div class="p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-5">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <!-- company name -->
+            <div>
+              <h2 class="text-xl md:text-2xl text-blue-950 font-semibold leading-10">MegaCorp Solutions</h2>
+              <p class="text-base md:text-xl text-gray-500 leading-6">JavaScript Developer</p>
+            </div>
+            <!-- delete button -->
+            <div>
+              <button
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 flex items-center justify-center">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="text-base md:text-lg text-gray-500 leading-6">New York, NY</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">Full-time</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">$130,000 - $170,000</span>
+          </div>
+
+          <div>
+            <!-- status badge -->
+            <p
+              class="py-2.5 px-5 inline-block bg-blue-100 rounded-lg font-medium text-lg md:text-2xl text-blue-950 uppercase">
+              Not
+              Applied</p>
+
+            <!-- job description -->
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health
+            insurance, and professional development opportunities.</p>
+          </div>
+
+          <!-- status toggle button -->
+          <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase">interview</button>
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase">rejected</button>
+          </div>
+        </div>
+        <!-- job card end 6 -->
+
+        <!-- job card start 7 -->
+        <div class="p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-5">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <!-- company name -->
+            <div>
+              <h2 class="text-xl md:text-2xl text-blue-950 font-semibold leading-10">StartupXYZ</h2>
+              <p class="text-base md:text-xl text-gray-500 leading-6">Full Stack Engineer</p>
+            </div>
+            <!-- delete button -->
+            <div>
+              <button
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 flex items-center justify-center">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="text-base md:text-lg text-gray-500 leading-6">Remote</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">Full-time</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">$120,000 - $160,000</span>
+          </div>
+
+          <div>
+            <!-- status badge -->
+            <p
+              class="py-2.5 px-5 inline-block bg-blue-100 rounded-lg font-medium text-lg md:text-2xl text-blue-950 uppercase">
+              Not
+              Applied</p>
+
+            <!-- job description -->
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits
+            and equity package included.</p>
+          </div>
+
+          <!-- status toggle button -->
+          <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase">interview</button>
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase">rejected</button>
+          </div>
+        </div>
+        <!-- job card end 7 -->
+
+        <!-- job card start 8 -->
+        <div class="p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-5">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <!-- company name -->
+            <div>
+              <h2 class="text-xl md:text-2xl text-blue-950 font-semibold leading-10">TechCorp Industries</h2>
+              <p class="text-base md:text-xl text-gray-500 leading-6">Senior Frontend Developer</p>
+            </div>
+            <!-- delete button -->
+            <div>
+              <button
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 flex items-center justify-center">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="text-base md:text-lg text-gray-500 leading-6">San Francisco, CA</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">Full-time</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">&bull;</span>
+            <span class="text-base md:text-lg text-gray-500 leading-6">$130,000 - $175,000</span>
+          </div>
+
+          <div>
+            <!-- status badge -->
+            <p
+              class="py-2.5 px-5 inline-block bg-blue-100 rounded-lg font-medium text-lg md:text-2xl text-blue-950 uppercase">
+              Not
+              Applied</p>
+
+            <!-- job description -->
+            <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You
+            will work with a talented team on cutting-edge projects.</p>
+          </div>
+
+          <!-- status toggle button -->
+          <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase">interview</button>
+            <button
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase">rejected</button>
+          </div>
+        </div>
+        <!-- job card end 8 -->
+      </div>
+
+      <!-- No jobs available card start -->
+      <div
+        class="py-20 md:py-32 px-8 border-2 border-gray-200 bg-gray-50 rounded-lg flex flex-col items-center justify-center gap-4 text-center">
         <div>
-          <!-- status badge -->
-          <p
-            class="py-2.5 px-5 inline-block bg-blue-100 rounded-lg font-medium text-lg md:text-2xl text-blue-950 uppercase">
-            Not
-            Applied</p>
-
-          <!-- job description -->
-          <p class="text-base md:text-lg leading-6 text-gray-800 pt-2.5">Build cross-platform mobile applications using
-            React Native.
-            Work on products used by
-            millions of users worldwide.</p>
+          <img src="./jobs.png" alt="jobs">
         </div>
-
-        <!-- status toggle button -->
-        <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
-          <button
-            class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase">interview</button>
-          <button
-            class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase">rejected</button>
+        <div>
+          <h2 class="text-xl md:text-2xl text-blue-950 font-semibold leading-10">No jobs available</h2>
+          <p class="text-base md:text-xl text-gray-500 leading-6">Check back soon for new job opportunities</p>
         </div>
       </div>
-      <!-- job card end -->
+      <!-- No jobs available card end -->
 
     </section>
-    <!-- job card section end -->
+    <!-- all job card section end -->
   </main>
   <!-- Available Jobs end -->
 
