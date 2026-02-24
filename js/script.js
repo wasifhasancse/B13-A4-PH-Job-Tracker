@@ -120,7 +120,7 @@ allJobShow.addEventListener("click", function (event) {
     return;
   }
 
-  const isDeleteButton = Boolean(clickedButton.querySelector(".fa-trash-can"));
+  const isDeleteButton = clickedButton.id === "delete-button";
   if (isDeleteButton) {
     const selectedCard = clickedButton.closest(".job-card");
     if (!selectedCard) {
