@@ -1,4 +1,4 @@
-// length count
+// length count select
 const totalCount = document.getElementById("total-count");
 const interviewCount = document.getElementById("interview-count");
 const rejectedCount = document.getElementById("rejected-count");
@@ -17,10 +17,7 @@ const noJobsCard = document.getElementById("no-jobs-available");
 
 let activeFilter = "all";
 
-function normalStatus(statusText) {
-  return statusText.trim().toLowerCase().replace(/\s+/g, " ");
-}
-
+// update the card status badge 
 function updateStatusBadgeStyle(statusBadge, status) {
   statusBadge.innerText = status;
   statusBadge.classList.remove(
@@ -52,22 +49,8 @@ function updateStatusBadgeStyle(statusBadge, status) {
   statusBadge.classList.add("text-blue-950", "border-blue-300", "bg-blue-100");
 }
 
-function setActiveTabStyle(activeButton) {
-  const allButtons = [allJobBtn, interviewJobBtn, rejectedJobBtn];
 
-  allButtons.forEach((button) => {
-    button.classList.remove("text-white", "border-blue-500", "bg-blue-500");
-    button.classList.add("text-gray-600", "border-gray-200", "bg-gray-50");
-  });
-
-  activeButton.classList.remove(
-    "text-gray-600",
-    "border-gray-200",
-    "bg-gray-50",
-  );
-  activeButton.classList.add("text-white", "border-blue-500", "bg-blue-500");
-}
-
+// filter the job cards according to the selected status and update the counts and dashboard
 function applyFilter(filterName) {
   activeFilter = filterName;
   let visibleCount = 0;
@@ -97,6 +80,7 @@ function applyFilter(filterName) {
   }
 }
 
+// toggle the job cards according to active tab and filter job cards according to status 
 function showFilteredJobs(buttonId) {
   if (buttonId === "all-job-button") {
     setActiveTabStyle(allJobBtn);
@@ -128,6 +112,7 @@ document
 
     showFilteredJobs(clickedButton.id);
   });
+
 
 allJobShow.addEventListener("click", function (event) {
   const clickedButton = event.target.closest("button");

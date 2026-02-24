@@ -1,29 +1,3 @@
-// length count
-function getLengthCount(element) {
-  return element.children.length;
-}
-
-function setStatusBadge(status) {
-  document.getElementById("job-status").innerText = status;
-  document.getElementById("job-status").classList.remove("text-gray-800");
-
-  if (status === "Interview") {
-    document
-      .getElementById("job-status")
-      .classList.remove("text-red-400", "border-red-300", "bg-red-100");
-    document
-      .getElementById("job-status")
-      .classList.add("text-green-400", "border-green-300", "bg-green-100");
-  } else if (status === "Rejected") {
-    document
-      .getElementById("job-status")
-      .classList.remove("text-green-400", "border-green-300", "bg-green-100");
-    document
-      .getElementById("job-status")
-      .classList.add("text-red-400", "border-red-300", "bg-red-100");
-  }
-}
-
 function updateDashboardCounts() {
   totalCount.innerText = jobCards.length;
   interviewCount.innerText = jobCards.filter(
@@ -34,6 +8,11 @@ function updateDashboardCounts() {
   ).length;
 }
 
+function normalStatus(statusText) {
+  return statusText.trim().toLowerCase();
+}
+
+
 function getCardStatus(card) {
   const statusBadge = card.querySelector("p.uppercase");
   if (!statusBadge) {
@@ -41,4 +20,20 @@ function getCardStatus(card) {
   }
 
   return normalStatus(statusBadge.innerText);
+}
+
+function setActiveTabStyle(activeButton) {
+  const allButtons = [allJobBtn, interviewJobBtn, rejectedJobBtn];
+
+  allButtons.forEach((button) => {
+    button.classList.remove("text-white", "border-blue-500", "bg-blue-500");
+    button.classList.add("text-gray-600", "border-gray-200", "bg-gray-50");
+  });
+
+  activeButton.classList.remove(
+    "text-gray-600",
+    "border-gray-200",
+    "bg-gray-50",
+  );
+  activeButton.classList.add("text-white", "border-blue-500", "bg-blue-500");
 }
