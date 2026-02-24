@@ -3,6 +3,7 @@ const totalCount = document.getElementById("total-count");
 const interviewCount = document.getElementById("interview-count");
 const rejectedCount = document.getElementById("rejected-count");
 const availableJobCount = document.getElementById("available-job-count");
+const filterJobCount = document.getElementById("filter-job-count");
 
 // dashboard button select
 const allJobBtn = document.getElementById("all-job-button");
@@ -70,6 +71,7 @@ function setActiveTabStyle(activeButton) {
 function applyFilter(filterName) {
   activeFilter = filterName;
   let visibleCount = 0;
+  const totalJobs = jobCards.length;
 
   jobCards.forEach((card) => {
     const cardStatus = getCardStatus(card);
@@ -82,7 +84,13 @@ function applyFilter(filterName) {
     }
   });
 
-  availableJobCount.innerText = visibleCount;
+  if (filterName === "all") {
+    filterJobCount.innerText = "";
+    availableJobCount.innerText = totalJobs;
+  } else {
+    filterJobCount.innerText = `${visibleCount} of `;
+    availableJobCount.innerText = totalJobs;
+  }
 
   if (noJobsCard) {
     noJobsCard.classList.toggle("hidden", visibleCount !== 0);
@@ -124,6 +132,24 @@ document
 allJobShow.addEventListener("click", function (event) {
   const clickedButton = event.target.closest("button");
   if (!clickedButton) {
+    return;
+  }
+
+  const isDeleteButton = Boolean(clickedButton.querySelector(".fa-trash-can"));
+  if (isDeleteButton) {
+    const selectedCard = clickedButton.closest(".job-card");
+    if (!selectedCard) {
+      return;
+    }
+
+    const selectedCardIndex = jobCards.indexOf(selectedCard);
+    if (selectedCardIndex !== -1) {
+      jobCards.splice(selectedCardIndex, 1);
+    }
+
+    selectedCard.remove();
+    updateDashboardCounts();
+    applyFilter(activeFilter);
     return;
   }
 
