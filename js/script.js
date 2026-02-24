@@ -11,29 +11,13 @@ const rejectedJobBtn = document.getElementById("rejected-job-button");
 const allJobShow = document.getElementById("all-job-show");
 const interviewJobShow = document.getElementById("interview-job-show");
 const rejectedJobShow = document.getElementById("rejected-job-show");
-const jobCards = Array.from(allJobShow.children);
-const noJobsCard = allJobShow.nextElementSibling;
+const jobCards = Array.from(allJobShow.querySelectorAll(".job-card"));
+const noJobsCard = document.getElementById("no-jobs-available");
 
 let activeFilter = "all";
 
 function normalStatus(statusText) {
-  let trimmed = statusText.trim().toLowerCase();
-  let result = "";
-  let lastWasSpace = false;
-
-  for (let i = 0; i < trimmed.length; i++) {
-    if (trimmed[i] === " ") {
-      if (!lastWasSpace) {
-        result += " ";
-        lastWasSpace = true;
-      }
-    } else {
-      result += trimmed[i];
-      lastWasSpace = false;
-    }
-  }
-
-  return result;
+  return statusText.trim().toLowerCase().replace(/\s+/g, " ");
 }
 
 function updateStatusBadgeStyle(statusBadge, status) {
@@ -105,6 +89,27 @@ function applyFilter(filterName) {
   }
 }
 
+function showFilteredJobs(buttonId) {
+  if (buttonId === "all-job-button") {
+    setActiveTabStyle(allJobBtn);
+    applyFilter("all");
+    return;
+  }
+
+  if (buttonId === "interview-job-button") {
+    setActiveTabStyle(interviewJobBtn);
+    applyFilter("interview");
+    return;
+  }
+
+  if (buttonId === "rejected-job-button") {
+    setActiveTabStyle(rejectedJobBtn);
+    applyFilter("rejected");
+  }
+}
+
+window.showFilteredJobs = showFilteredJobs;
+
 document
   .getElementById("job-show-buttons")
   .addEventListener("click", function (event) {
@@ -113,59 +118,36 @@ document
       return;
     }
 
-    if (clickedButton.id === "all-job-button") {
-      setActiveTabStyle(allJobBtn);
-      applyFilter("all");
-      return;
-    }
-
-    if (clickedButton.id === "interview-job-button") {
-      setActiveTabStyle(interviewJobBtn);
-      applyFilter("interview");
-      return;
-    }
-
-    if (clickedButton.id === "rejected-job-button") {
-      setActiveTabStyle(rejectedJobBtn);
-      applyFilter("rejected");
-    }
+    showFilteredJobs(clickedButton.id);
   });
 
-  allJobShow.addEventListener("click", function (event) {
-    const clickedButton = event.target.closest("button");
-    if (!clickedButton) {
-      return;
-    }
-
-    const buttonLabel = normalStatus(clickedButton.innerText);
-    if (buttonLabel !== "interview" && buttonLabel !== "rejected") {
-      return;
-    }
-
-    const selectedCard = jobCards.find((card) => card.contains(clickedButton));
-    if (!selectedCard) {
-      return;
-    }
-
-    const statusBadge = selectedCard.querySelector("p.uppercase");
-    if (!statusBadge) {
-      return;
-    }
-
-    const nextStatus = buttonLabel === "interview" ? "Interview" : "Rejected";
-    updateStatusBadgeStyle(statusBadge, nextStatus);
-    updateDashboardCounts();
-    applyFilter(activeFilter);
-  });
-
-  if (interviewJobShow.parentElement) {
-    interviewJobShow.parentElement.classList.add("hidden");
+allJobShow.addEventListener("click", function (event) {
+  const clickedButton = event.target.closest("button");
+  if (!clickedButton) {
+    return;
   }
 
-  if (rejectedJobShow.parentElement) {
-    rejectedJobShow.parentElement.classList.add("hidden");
+  const buttonLabel = normalStatus(clickedButton.innerText);
+  if (buttonLabel !== "interview" && buttonLabel !== "rejected") {
+    return;
   }
 
+  const selectedCard = jobCards.find((card) => card.contains(clickedButton));
+  if (!selectedCard) {
+    return;
+  }
+
+  const statusBadge = selectedCard.querySelector("p.uppercase");
+  if (!statusBadge) {
+    return;
+  }
+
+  const nextStatus = buttonLabel === "interview" ? "Interview" : "Rejected";
+  updateStatusBadgeStyle(statusBadge, nextStatus);
   updateDashboardCounts();
-  setActiveTabStyle(allJobBtn);
-  applyFilter("all");
+  applyFilter(activeFilter);
+});
+
+updateDashboardCounts();
+setActiveTabStyle(allJobBtn);
+applyFilter("all");
