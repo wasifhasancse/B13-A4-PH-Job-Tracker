@@ -60,8 +60,9 @@
   </header>
   <!-- header section end -->
 
-  <!-- <div class="container px-5 mx-auto py-16 h-px bg-gray-200 "></div> -->
-  <hr class="container px-5 mx-auto border-2 border-red-500">
+  <div class="container px-5 mx-auto py-4">
+    <hr class="border-2 border-gray-200">
+  </div>
 
   <!-- Available Jobs start -->
   <main class="container px-5 mx-auto pt-8 md:pt-16">
@@ -80,11 +81,12 @@
       <div id="job-show-buttons"
         class="py-5 flex flex-col justify-center items-stretch gap-3 md:flex-row md:items-center md:justify-start md:gap-5">
         <button onclick="showFilteredJobs('all-job-button')" id="all-job-button"
-          class="py-3 md:py-5 px-5 md:px-10 border-2 border-blue-500 bg-blue-500 rounded-lg font-medium text-lg md:text-2xl w-full md:w-60 text-white cursor-pointer">All</button>
-        <button onclick="showFilteredJobs('interview-job-button')" id="interview-job-button"
-          class="py-3 md:py-5 px-5 md:px-10 border-2 border-gray-200 bg-gray-50 rounded-lg font-medium text-lg md:text-2xl w-full md:w-60 text-gray-600 cursor-pointer">Interview</button>
+          class="py-3 md:py-5 px-5 md:px-10 border-2 border-blue-500 bg-blue-500 rounded-lg font-medium text-lg md:text-2xl w-full md:w-60 text-white cursor-pointer hover:border-blue-500 hover:shadow hover:shadow-blue-300 transition duration-300">All</button>
+        
+          <button onclick="showFilteredJobs('interview-job-button')" id="interview-job-button"
+          class="py-3 md:py-5 px-5 md:px-10 border-2 border-gray-200 bg-gray-50 rounded-lg font-medium text-lg md:text-2xl w-full md:w-60 text-gray-600 cursor-pointer hover:border-blue-500 hover:shadow hover:shadow-blue-300 transition duration-300">Interview</button>
         <button onclick="showFilteredJobs('rejected-job-button')" id="rejected-job-button"
-          class="py-3 md:py-5 px-5 md:px-10 border-2 border-gray-200 bg-gray-50 rounded-lg font-medium text-lg md:text-2xl w-full md:w-60 text-gray-600 cursor-pointer">Rejected</button>
+          class="py-3 md:py-5 px-5 md:px-10 border-2 border-gray-200 bg-gray-50 rounded-lg font-medium text-lg md:text-2xl w-full md:w-60 text-gray-600 cursor-pointer hover:border-blue-500 hover:shadow hover:shadow-blue-300 transition duration-300">Rejected</button>
       </div>
       <!-- Button of Available Jobs section end -->
     </section>
@@ -94,7 +96,7 @@
       <div id="all-job-show" class="space-y-5">
 
         <!-- job card start 1 -->
-        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6">
+        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6 hover:border-blue-300 transition duration-300">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <!-- company name -->
             <div>
@@ -104,7 +106,7 @@
             <!-- delete button -->
             <div>
               <button id="delete-button"
-                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 cursor-pointer flex items-center justify-center">
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-red-100 hover:text-red-500 hover:border-red-300 transition duration-300 cursor-pointer flex items-center justify-center">
                 <i class="fa-regular fa-trash-can"></i>
               </button>
             </div>
@@ -135,15 +137,15 @@
           <!-- status toggle button -->
           <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer">interview</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer hover:bg-green-100 hover:text-green-600 transition duration-300">interview</button>
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer">rejected</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer hover:bg-red-100 hover:text-red-600 transition duration-300">rejected</button>
           </div>
         </div>
         <!-- job card end 1 -->
 
         <!-- job card start 2 -->
-        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6">
+        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6 hover:border-blue-300 transition duration-300">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <!-- company name -->
             <div>
@@ -153,7 +155,7 @@
             <!-- delete button -->
             <div>
               <button id="delete-button"
-                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 cursor-pointer flex items-center justify-center">
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-red-100 hover:text-red-500 hover:border-red-300 transition duration-300 cursor-pointer flex items-center justify-center">
                 <i class="fa-regular fa-trash-can"></i>
               </button>
             </div>
@@ -182,15 +184,15 @@
           <!-- status toggle button -->
           <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer">interview</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer hover:bg-green-100 hover:text-green-600 transition duration-300">interview</button>
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer">rejected</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer hover:bg-red-100 hover:text-red-600 transition duration-300">rejected</button>
           </div>
         </div>
         <!-- job card end 2 -->
 
         <!-- job card start 3 -->
-        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6">
+        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6 hover:border-blue-300 transition duration-300">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <!-- company name -->
             <div>
@@ -200,7 +202,7 @@
             <!-- delete button -->
             <div>
               <button id="delete-button"
-                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 cursor-pointer flex items-center justify-center">
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-red-100 hover:text-red-500 hover:border-red-300 transition duration-300 cursor-pointer flex items-center justify-center">
                 <i class="fa-regular fa-trash-can"></i>
               </button>
             </div>
@@ -229,15 +231,15 @@
           <!-- status toggle button -->
           <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer">interview</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer hover:bg-green-100 hover:text-green-600 transition duration-300">interview</button>
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer">rejected</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer hover:bg-red-100 hover:text-red-600 transition duration-300">rejected</button>
           </div>
         </div>
         <!-- job card end 3 -->
 
         <!-- job card start 4 -->
-        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6">
+        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6 hover:border-blue-300 transition duration-300">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <!-- company name -->
             <div>
@@ -247,7 +249,7 @@
             <!-- delete button -->
             <div>
               <button id="delete-button"
-                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 cursor-pointer flex items-center justify-center">
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-red-100 hover:text-red-500 hover:border-red-300 transition duration-300 cursor-pointer flex items-center justify-center">
                 <i class="fa-regular fa-trash-can"></i>
               </button>
             </div>
@@ -276,15 +278,15 @@
           <!-- status toggle button -->
           <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer">interview</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer hover:bg-green-100 hover:text-green-600 transition duration-300">interview</button>
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer">rejected</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer hover:bg-red-100 hover:text-red-600 transition duration-300">rejected</button>
           </div>
         </div>
         <!-- job card end 4 -->
 
         <!-- job card start 5 -->
-        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6">
+        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6 hover:border-blue-300 transition duration-300">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <!-- company name -->
             <div>
@@ -294,7 +296,7 @@
             <!-- delete button -->
             <div>
               <button id="delete-button"
-                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 cursor-pointer flex items-center justify-center">
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-red-100 hover:text-red-500 hover:border-red-300 transition duration-300 cursor-pointer flex items-center justify-center">
                 <i class="fa-regular fa-trash-can"></i>
               </button>
             </div>
@@ -323,15 +325,15 @@
           <!-- status toggle button -->
           <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer">interview</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer hover:bg-green-100 hover:text-green-600 transition duration-300">interview</button>
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer">rejected</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer hover:bg-red-100 hover:text-red-600 transition duration-300">rejected</button>
           </div>
         </div>
         <!-- job card end 5 -->
 
         <!-- job card start 6 -->
-        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6">
+        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6 hover:border-blue-300 transition duration-300">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <!-- company name -->
             <div>
@@ -341,7 +343,7 @@
             <!-- delete button -->
             <div>
               <button id="delete-button"
-                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 cursor-pointer flex items-center justify-center">
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-red-100 hover:text-red-500 hover:border-red-300 transition duration-300 cursor-pointer flex items-center justify-center">
                 <i class="fa-regular fa-trash-can"></i>
               </button>
             </div>
@@ -369,15 +371,15 @@
           <!-- status toggle button -->
           <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer">interview</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer hover:bg-green-100 hover:text-green-600 transition duration-300">interview</button>
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer">rejected</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer hover:bg-red-100 hover:text-red-600 transition duration-300">rejected</button>
           </div>
         </div>
         <!-- job card end 6 -->
 
         <!-- job card start 7 -->
-        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6">
+        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6 hover:border-blue-300 transition duration-300">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <!-- company name -->
             <div>
@@ -387,7 +389,7 @@
             <!-- delete button -->
             <div>
               <button id="delete-button"
-                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 cursor-pointer flex items-center justify-center">
+                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-red-100 hover:text-red-500 hover:border-red-300 transition duration-300 cursor-pointer flex items-center justify-center">
                 <i class="fa-regular fa-trash-can"></i>
               </button>
             </div>
@@ -415,15 +417,15 @@
           <!-- status toggle button -->
           <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer">interview</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer hover:bg-green-100 hover:text-green-600 transition duration-300">interview</button>
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer">rejected</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer hover:bg-red-100 hover:text-red-600 transition duration-300">rejected</button>
           </div>
         </div>
         <!-- job card end 7 -->
 
         <!-- job card start 8 -->
-        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6">
+        <div class="job-card p-6 md:p-8 border-2 border-gray-200 bg-gray-50 rounded-lg space-y-6 hover:border-blue-300 transition duration-300">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <!-- company name -->
             <div>
@@ -432,10 +434,10 @@
             </div>
             <!-- delete button -->
             <div>
-              <button id="delete-button"
-                class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-gray-200 transition duration-300 cursor-pointer flex items-center justify-center">
-                <i class="fa-regular fa-trash-can"></i>
-              </button>
+            <button id="delete-button"
+              class="p-2.5 border-2 border-gray-200 rounded-full text-gray-500 hover:bg-red-100 hover:text-red-500 hover:border-red-300 transition duration-300 cursor-pointer flex items-center justify-center">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
             </div>
           </div>
 
@@ -461,9 +463,9 @@
           <!-- status toggle button -->
           <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-5">
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer">interview</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-green-500 rounded-lg font-medium text-lg md:text-2xl text-green-500 uppercase cursor-pointer hover:bg-green-100 hover:text-green-600 transition duration-300">interview</button>
             <button
-              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer">rejected</button>
+              class="py-2.5 px-5 inline-block border-2 border-t-red-500 rounded-lg font-medium text-lg md:text-2xl text-red-500 uppercase cursor-pointer hover:bg-red-100 hover:text-red-600 transition duration-300">rejected</button>
           </div>
         </div>
         <!-- job card end 8 -->
